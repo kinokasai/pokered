@@ -75,7 +75,9 @@ TryDoWildEncounter:
 	add hl, bc
 	ld a, [hli]
 	ld [wCurEnemyLVL], a
-	ld a, [hl]
+	;ld a, [hl]
+    call Random
+    ld a, [hRandomSub]
 	ld [wcf91], a
 	ld [wEnemyMonSpecies2], a
 	ld a, [wRepelRemainingSteps]
